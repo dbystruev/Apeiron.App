@@ -23,72 +23,67 @@ class MapViewController: UIViewController {
     
     /// Set initial view of the screen with pins
     func setupMapView() {
-        
-        /// Performs operation (e. g. min or max) on tuple with two double elements
-        ///
-        /// - Parameters:
-        ///   - left: first tuple
-        ///   - right: second tuple
-        ///   - operation: operation to perform (e. g. min or max)
-        /// - Returns: a tuple each element of which is the result of operation
-        func operate(
-            _ left: (Double, Double),
-            _ right: (Double, Double),
-            operation: (Double, Double) -> Double
-        ) -> (Double, Double) {
-            return (operation(left.0, right.0), operation(left.1, right.1))
-        }
-        
-        // find bottom left and top right coordinates — start with first element
-        var bottomLeft = locations.first!
-        var topRight = bottomLeft
-        
-        // go through all places and find bottom left and top right boundaries
-        for place in locations {
-            bottomLeft = operate(bottomLeft, place, operation: min)
-            topRight = operate(topRight, place, operation: max)
-        }
-        
-        // find out the center of the map
-        let center = operate(bottomLeft, topRight, operation: { ($0 + $1) / 2 })
-        let centerLocation = CLLocationCoordinate2D(latitude: center.0, longitude: center.1)
-        
-        // find out the maximum delta between the objects on map
-        var delta = operate(bottomLeft, topRight, operation: { 1.5 * abs($0 - $1) })
-        delta.0 = max(delta.0, delta.1)
-        delta.1 = delta.0
-        
+        // allow user to scroll
+        mapView.isScrollEnabled = true
+
         // allow user to zoom
         mapView.isZoomEnabled = true
         
-        // allow user to scroll
-        mapView.isScrollEnabled = true
-        
-        // setup standard map type
+        // set standard map type
         mapView.mapType = .standard
         
+        // to find South West and North East coordinates start with the first element
+        var southWest = places.first!.coordinate
+        var northEast = southWest
+        
+        // go through all the places to find the South West and North East points
+        for place in places {
+            // get the geo coordinate of the place
+            let coordinate = place.coordinate
+            
+            // search for min latitude and longitude to get the South West coordinate
+            southWest.latitude = min(southWest.latitude, coordinate.latitude)
+            southWest.longitude = min(southWest.longitude, coordinate.longitude)
+            
+            // search for max latitude and longitude to the the North East coordinate
+            northEast.latitude = max(northEast.latitude, coordinate.latitude)
+            northEast.longitude = max(northEast.longitude, coordinate.longitude)
+        }
+        
+        // find out the deltas for the span and use the highest one
+        let latitudeDelta = abs(southWest.latitude - northEast.latitude)
+        let longitudeDelta = abs(southWest.longitude - northEast.longitude)
+        let maxDelta = 2 * max(latitudeDelta, longitudeDelta)
+        
+        // find out the center of the map
+        let center = CLLocationCoordinate2D(
+            latitude: (southWest.latitude + northEast.latitude) / 2,
+            longitude: (southWest.longitude + northEast.longitude) / 2
+        )
+        
         // set the span area
-        let span = MKCoordinateSpan(latitudeDelta: delta.0, longitudeDelta: delta.1)
+        let span = MKCoordinateSpan(latitudeDelta: maxDelta, longitudeDelta: maxDelta)
         
         // set the region
-        let region = MKCoordinateRegion(center: centerLocation, span: span)
-        mapView.region = region
+        mapView.region = MKCoordinateRegion(center: center, span: span)
         
         // set the pins
-        for place in locations {
+        for place in places {
             setPin(place)
         }
     }
 
-    /// Creates a pin on the map at coordinate
+    /// Creates a pin on the map at the given place
     ///
-    /// - Parameter coordinate: place where to put pin on
-    func setPin(_ coordinate: (Double, Double)) {
+    /// - Parameter place: a place where to put pin on
+    func setPin(_ place: Place) {
         // create a point annotation
         let pin = MKPointAnnotation()
         
-        // set annotation's coordinate
-        pin.coordinate = CLLocationCoordinate2D(latitude: coordinate.0, longitude: coordinate.1)
+        // set annotation's coordinate and title
+        pin.coordinate = place.coordinate
+        pin.subtitle = place.address
+        pin.title = place.title
         
         // add annotation to map
         mapView.addAnnotation(pin)
