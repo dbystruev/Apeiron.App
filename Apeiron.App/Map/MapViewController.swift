@@ -40,11 +40,11 @@ class MapViewController: UIViewController {
         }
         
         // find bottom left and top right coordinates — start with first element
-        var bottomLeft = places.first!
+        var bottomLeft = locations.first!
         var topRight = bottomLeft
         
         // go through all places and find bottom left and top right boundaries
-        for place in places {
+        for place in locations {
             bottomLeft = operate(bottomLeft, place, operation: min)
             topRight = operate(topRight, place, operation: max)
         }
@@ -75,7 +75,7 @@ class MapViewController: UIViewController {
         mapView.region = region
         
         // set the pins
-        for place in places {
+        for place in locations {
             setPin(place)
         }
     }

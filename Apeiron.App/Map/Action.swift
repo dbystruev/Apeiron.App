@@ -1,5 +1,5 @@
 //
-//  Actions.swift
+//  Action.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 01/09/2018.
@@ -9,9 +9,11 @@ import UIKit
 
 /// Action to perform when annotation pin is tapped on the map view
 ///
+/// — none: no action
 /// - openURL: open an URL with open(_:options:completionHandler:)
 /// - performSegue: perform a segue with performSegue(withIdentifier:sender:)
 enum Action {
+    case none
     case openURL(String)
     case performSegue(String)
     
@@ -19,6 +21,9 @@ enum Action {
     func perform() {
         // check which action to perform
         switch self {
+        case .none:
+            // no action to perform
+            break
         case .openURL(let scheme):
             // check that we can create a URL from the scheme ("scheme://")
             guard let url = URL(string: scheme) else {
