@@ -17,6 +17,7 @@
 		69848510213AF19D0001F876 /* Apeiron_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984850F213AF19C0001F876 /* Apeiron_AppUITests.swift */; };
 		69848522213B1AB20001F876 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848521213B1AB20001F876 /* Place.swift */; };
 		69848525213B1D4B0001F876 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848524213B1D4B0001F876 /* Action.swift */; };
+		69848527213B45140001F876 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848526213B45140001F876 /* PointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		69848511213AF19D0001F876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69848521213B1AB20001F876 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		69848524213B1D4B0001F876 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		69848526213B45140001F876 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				69848524213B1D4B0001F876 /* Action.swift */,
 				698484EE213AF1970001F876 /* MapViewController.swift */,
 				69848521213B1AB20001F876 /* Place.swift */,
+				69848526213B45140001F876 /* PointAnnotation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69848525213B1D4B0001F876 /* Action.swift in Sources */,
+				69848527213B45140001F876 /* PointAnnotation.swift in Sources */,
 				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
 				698484EF213AF1970001F876 /* MapViewController.swift in Sources */,
 				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,

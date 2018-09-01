@@ -78,7 +78,7 @@ class MapViewController: UIViewController {
     /// - Parameter place: a place where to put pin on
     func setPin(_ place: Place) {
         // create a point annotation
-        let pin = MKPointAnnotation()
+        let pin = PointAnnotation(place: place)
         
         // set annotation's coordinate and title
         pin.coordinate = place.coordinate
@@ -89,4 +89,3 @@ class MapViewController: UIViewController {
         mapView.addAnnotation(pin)
     }
 }
-
