@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		698484ED213AF1970001F876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698484EC213AF1970001F876 /* AppDelegate.swift */; };
+		698484EF213AF1970001F876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698484EE213AF1970001F876 /* ViewController.swift */; };
+		698484F2213AF1970001F876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698484F0213AF1970001F876 /* Main.storyboard */; };
+		698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 698484F3213AF1970001F876 /* Apeiron_App.xcdatamodeld */; };
+		698484F7213AF19C0001F876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698484F6213AF19C0001F876 /* Assets.xcassets */; };
+		698484FA213AF19C0001F876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698484F8213AF19C0001F876 /* LaunchScreen.storyboard */; };
+		69848505213AF19C0001F876 /* Apeiron_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848504213AF19C0001F876 /* Apeiron_AppTests.swift */; };
+		69848510213AF19D0001F876 /* Apeiron_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984850F213AF19C0001F876 /* Apeiron_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69848501213AF19C0001F876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 698484E1213AF1970001F876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 698484E8213AF1970001F876;
+			remoteInfo = Apeiron.App;
+		};
+		6984850C213AF19C0001F876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 698484E1213AF1970001F876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 698484E8213AF1970001F876;
+			remoteInfo = Apeiron.App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		698484E9213AF1970001F876 /* Apeiron.App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apeiron.App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		698484EC213AF1970001F876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		698484EE213AF1970001F876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		698484F1213AF1970001F876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		698484F4213AF1970001F876 /* Apeiron_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Apeiron_App.xcdatamodel; sourceTree = "<group>"; };
+		698484F6213AF19C0001F876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		698484F9213AF19C0001F876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		698484FB213AF19C0001F876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69848500213AF19C0001F876 /* Apeiron.AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Apeiron.AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69848504213AF19C0001F876 /* Apeiron_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apeiron_AppTests.swift; sourceTree = "<group>"; };
+		69848506213AF19C0001F876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6984850B213AF19C0001F876 /* Apeiron.AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Apeiron.AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6984850F213AF19C0001F876 /* Apeiron_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apeiron_AppUITests.swift; sourceTree = "<group>"; };
+		69848511213AF19D0001F876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		698484E6213AF1970001F876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698484FD213AF19C0001F876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69848508213AF19C0001F876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		698484E0213AF1970001F876 = {
+			isa = PBXGroup;
+			children = (
+				698484EB213AF1970001F876 /* Apeiron.App */,
+				69848503213AF19C0001F876 /* Apeiron.AppTests */,
+				6984850E213AF19C0001F876 /* Apeiron.AppUITests */,
+				698484EA213AF1970001F876 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		698484EA213AF1970001F876 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				698484E9213AF1970001F876 /* Apeiron.App.app */,
+				69848500213AF19C0001F876 /* Apeiron.AppTests.xctest */,
+				6984850B213AF19C0001F876 /* Apeiron.AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		698484EB213AF1970001F876 /* Apeiron.App */ = {
+			isa = PBXGroup;
+			children = (
+				698484EC213AF1970001F876 /* AppDelegate.swift */,
+				698484EE213AF1970001F876 /* ViewController.swift */,
+				698484F0213AF1970001F876 /* Main.storyboard */,
+				698484F6213AF19C0001F876 /* Assets.xcassets */,
+				698484F8213AF19C0001F876 /* LaunchScreen.storyboard */,
+				698484FB213AF19C0001F876 /* Info.plist */,
+				698484F3213AF1970001F876 /* Apeiron_App.xcdatamodeld */,
+			);
+			path = Apeiron.App;
+			sourceTree = "<group>";
+		};
+		69848503213AF19C0001F876 /* Apeiron.AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				69848504213AF19C0001F876 /* Apeiron_AppTests.swift */,
+				69848506213AF19C0001F876 /* Info.plist */,
+			);
+			path = Apeiron.AppTests;
+			sourceTree = "<group>";
+		};
+		6984850E213AF19C0001F876 /* Apeiron.AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6984850F213AF19C0001F876 /* Apeiron_AppUITests.swift */,
+				69848511213AF19D0001F876 /* Info.plist */,
+			);
+			path = Apeiron.AppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		698484E8213AF1970001F876 /* Apeiron.App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69848514213AF19D0001F876 /* Build configuration list for PBXNativeTarget "Apeiron.App" */;
+			buildPhases = (
+				698484E5213AF1970001F876 /* Sources */,
+				698484E6213AF1970001F876 /* Frameworks */,
+				698484E7213AF1970001F876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Apeiron.App;
+			productName = Apeiron.App;
+			productReference = 698484E9213AF1970001F876 /* Apeiron.App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		698484FF213AF19C0001F876 /* Apeiron.AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69848517213AF19D0001F876 /* Build configuration list for PBXNativeTarget "Apeiron.AppTests" */;
+			buildPhases = (
+				698484FC213AF19C0001F876 /* Sources */,
+				698484FD213AF19C0001F876 /* Frameworks */,
+				698484FE213AF19C0001F876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69848502213AF19C0001F876 /* PBXTargetDependency */,
+			);
+			name = Apeiron.AppTests;
+			productName = Apeiron.AppTests;
+			productReference = 69848500213AF19C0001F876 /* Apeiron.AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6984850A213AF19C0001F876 /* Apeiron.AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6984851A213AF19D0001F876 /* Build configuration list for PBXNativeTarget "Apeiron.AppUITests" */;
+			buildPhases = (
+				69848507213AF19C0001F876 /* Sources */,
+				69848508213AF19C0001F876 /* Frameworks */,
+				69848509213AF19C0001F876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6984850D213AF19C0001F876 /* PBXTargetDependency */,
+			);
+			name = Apeiron.AppUITests;
+			productName = Apeiron.AppUITests;
+			productReference = 6984850B213AF19C0001F876 /* Apeiron.AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		698484E1213AF1970001F876 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Denis Bystruev";
+				TargetAttributes = {
+					698484E8213AF1970001F876 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					698484FF213AF19C0001F876 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 698484E8213AF1970001F876;
+					};
+					6984850A213AF19C0001F876 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 698484E8213AF1970001F876;
+					};
+				};
+			};
+			buildConfigurationList = 698484E4213AF1970001F876 /* Build configuration list for PBXProject "Apeiron.App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 698484E0213AF1970001F876;
+			productRefGroup = 698484EA213AF1970001F876 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				698484E8213AF1970001F876 /* Apeiron.App */,
+				698484FF213AF19C0001F876 /* Apeiron.AppTests */,
+				6984850A213AF19C0001F876 /* Apeiron.AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		698484E7213AF1970001F876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698484FA213AF19C0001F876 /* LaunchScreen.storyboard in Resources */,
+				698484F7213AF19C0001F876 /* Assets.xcassets in Resources */,
+				698484F2213AF1970001F876 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698484FE213AF19C0001F876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69848509213AF19C0001F876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		698484E5213AF1970001F876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
+				698484EF213AF1970001F876 /* ViewController.swift in Sources */,
+				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698484FC213AF19C0001F876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69848505213AF19C0001F876 /* Apeiron_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69848507213AF19C0001F876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69848510213AF19D0001F876 /* Apeiron_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69848502213AF19C0001F876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 698484E8213AF1970001F876 /* Apeiron.App */;
+			targetProxy = 69848501213AF19C0001F876 /* PBXContainerItemProxy */;
+		};
+		6984850D213AF19C0001F876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 698484E8213AF1970001F876 /* Apeiron.App */;
+			targetProxy = 6984850C213AF19C0001F876 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		698484F0213AF1970001F876 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				698484F1213AF1970001F876 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		698484F8213AF19C0001F876 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				698484F9213AF19C0001F876 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69848512213AF19D0001F876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69848513213AF19D0001F876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69848515213AF19D0001F876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				INFOPLIST_FILE = Apeiron.App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69848516213AF19D0001F876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				INFOPLIST_FILE = Apeiron.App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69848518213AF19D0001F876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				INFOPLIST_FILE = Apeiron.AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apeiron.App.app/Apeiron.App";
+			};
+			name = Debug;
+		};
+		69848519213AF19D0001F876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				INFOPLIST_FILE = Apeiron.AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apeiron.App.app/Apeiron.App";
+			};
+			name = Release;
+		};
+		6984851B213AF19D0001F876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				INFOPLIST_FILE = Apeiron.AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Apeiron.App;
+			};
+			name = Debug;
+		};
+		6984851C213AF19D0001F876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				INFOPLIST_FILE = Apeiron.AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Apeiron.App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		698484E4213AF1970001F876 /* Build configuration list for PBXProject "Apeiron.App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69848512213AF19D0001F876 /* Debug */,
+				69848513213AF19D0001F876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69848514213AF19D0001F876 /* Build configuration list for PBXNativeTarget "Apeiron.App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69848515213AF19D0001F876 /* Debug */,
+				69848516213AF19D0001F876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69848517213AF19D0001F876 /* Build configuration list for PBXNativeTarget "Apeiron.AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69848518213AF19D0001F876 /* Debug */,
+				69848519213AF19D0001F876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6984851A213AF19D0001F876 /* Build configuration list for PBXNativeTarget "Apeiron.AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6984851B213AF19D0001F876 /* Debug */,
+				6984851C213AF19D0001F876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		698484F3213AF1970001F876 /* Apeiron_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				698484F4213AF1970001F876 /* Apeiron_App.xcdatamodel */,
+			);
+			currentVersion = 698484F4213AF1970001F876 /* Apeiron_App.xcdatamodel */;
+			path = Apeiron_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 698484E1213AF1970001F876 /* Project object */;
+}
