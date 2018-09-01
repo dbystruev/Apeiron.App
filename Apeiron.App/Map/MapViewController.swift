@@ -9,11 +9,15 @@
 import MapKit
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     /// Map view presenting the main screen
     @IBOutlet weak var mapView: MKMapView!
 
+    /// True when already selected annotation (pin) is touched again
+    var secondTouch = false
+    
+    /// Called when the map view has been loaded
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +27,9 @@ class MapViewController: UIViewController {
     
     /// Set initial view of the screen with pins
     func setupMapView() {
+        // set ourselves as MKMapViewDelegate
+        mapView.delegate = self
+        
         // allow user to scroll
         mapView.isScrollEnabled = true
 
@@ -32,6 +39,17 @@ class MapViewController: UIViewController {
         // set standard map type
         mapView.mapType = .standard
         
+        // center and zoom the map so that all pins are visible
+        showAllPins()
+        
+        // set the pins
+        for place in places {
+            setPin(place)
+        }
+    }
+    
+    /// Center and zoom the map so that all pins are visible
+    func showAllPins() {
         // to find South West and North East coordinates start with the first element
         var southWest = places.first!.coordinate
         var northEast = southWest
@@ -65,12 +83,8 @@ class MapViewController: UIViewController {
         let span = MKCoordinateSpan(latitudeDelta: maxDelta, longitudeDelta: maxDelta)
         
         // set the region
-        mapView.region = MKCoordinateRegion(center: center, span: span)
-        
-        // set the pins
-        for place in places {
-            setPin(place)
-        }
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.setRegion(region, animated: true)
     }
 
     /// Creates a pin on the map at the given place
@@ -87,5 +101,75 @@ class MapViewController: UIViewController {
         
         // add annotation to map
         mapView.addAnnotation(pin)
+    }
+    
+    /// Called when the user selects the pin
+    ///
+    /// - Parameters:
+    ///   - mapView: map view with the pin
+    ///   - view: annotation (pin) view tapped
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        // this pin is just selected, next touch is not yet to perform action
+        secondTouch = false
+        
+        // check that tapped pin is a point annotation
+        guard let annotation = view.annotation as? PointAnnotation else {
+            print("\(#function) can't get the tapped annotation")
+            return
+        }
+        
+        // create the new region with center and span around the tapped pin
+        let center = annotation.coordinate
+        var span = mapView.region.span
+        var delta = min(span.latitudeDelta, span.longitudeDelta)
+        
+        // go through all the coordinates and calculate the minimum span
+        for place in places {
+            // get the coordinate of the given place
+            let coordinate = place.coordinate
+            
+            // skip own coordinate
+            if coordinate == center {
+                continue
+            }
+            
+            // find the minimum span for the latitude and the longitude
+            delta = min(delta, abs(coordinate.latitude - center.latitude), abs(coordinate.longitude - center.longitude))
+        }
+        
+        // recalculate the span based on delta
+        delta = min(4 * delta, span.latitudeDelta, span.longitudeDelta)
+        span = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
+        
+        // create the new region centered around selected pin with the next pin on the side
+        let region = MKCoordinateRegion(center: center, span: span)
+        
+        // animate a change of the region
+        mapView.setRegion(region, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        // the pin is deselected, no second touch is possible yet
+        secondTouch = false
+        
+        // center and zoom the map so that all pins are visible
+        showAllPins()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // if this is the second touch — perform action
+        if secondTouch {
+            // check if we can get an action from the selected annotation
+            guard let action = (mapView.selectedAnnotations.first as? PointAnnotation)?.place.action else {
+                print("\(#function): can't unwrap action")
+                return
+            }
+            
+            // perform the action
+            print("\(#function): Action to perform: \(action)")
+        } else {
+            // next touch would be the second touch
+            secondTouch = true
+        }
     }
 }

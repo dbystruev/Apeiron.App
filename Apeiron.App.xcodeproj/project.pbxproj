@@ -18,6 +18,7 @@
 		69848522213B1AB20001F876 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848521213B1AB20001F876 /* Place.swift */; };
 		69848525213B1D4B0001F876 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848524213B1D4B0001F876 /* Action.swift */; };
 		69848527213B45140001F876 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848526213B45140001F876 /* PointAnnotation.swift */; };
+		69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		69848521213B1AB20001F876 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		69848524213B1D4B0001F876 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		69848526213B45140001F876 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
+		69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				69848524213B1D4B0001F876 /* Action.swift */,
+				69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */,
 				698484EE213AF1970001F876 /* MapViewController.swift */,
 				69848521213B1AB20001F876 /* Place.swift */,
 				69848526213B45140001F876 /* PointAnnotation.swift */,
@@ -281,6 +284,7 @@
 				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
 				698484EF213AF1970001F876 /* MapViewController.swift in Sources */,
 				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,
+				69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				69848522213B1AB20001F876 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
