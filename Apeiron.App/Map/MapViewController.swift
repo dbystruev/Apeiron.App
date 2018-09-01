@@ -13,15 +13,6 @@ class MapViewController: UIViewController {
     
     /// Map view presenting the main screen
     @IBOutlet weak var mapView: MKMapView!
-    
-    /// GPS coordinates for the pins at the map
-    let places = [
-        (55.770811, 37.677652),     // Бауманская улица, 40 (дом, где родился Пушкин)
-        (55.766557, 37.648762),     // Большой Харитоньевский переулок, 21с1 (жили 1802–1803)
-        (55.772679, 37.674993),     // Спартаковская улица, 15 (Собор Богоявления Господня в Елохове)
-        (55.757718, 37.595779),     // Большая Никитская улица, 36с1 (Храм Большое Вознесение)
-        (55.747226, 37.586086),     // улица Арбат, 53с6 (жили 1830–1831)
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()

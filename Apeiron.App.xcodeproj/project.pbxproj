@@ -15,6 +15,8 @@
 		698484FA213AF19C0001F876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698484F8213AF19C0001F876 /* LaunchScreen.storyboard */; };
 		69848505213AF19C0001F876 /* Apeiron_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848504213AF19C0001F876 /* Apeiron_AppTests.swift */; };
 		69848510213AF19D0001F876 /* Apeiron_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984850F213AF19C0001F876 /* Apeiron_AppUITests.swift */; };
+		69848522213B1AB20001F876 /* places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848521213B1AB20001F876 /* places.swift */; };
+		69848525213B1D4B0001F876 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848524213B1D4B0001F876 /* Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6984850B213AF19C0001F876 /* Apeiron.AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Apeiron.AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6984850F213AF19C0001F876 /* Apeiron_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apeiron_AppUITests.swift; sourceTree = "<group>"; };
 		69848511213AF19D0001F876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69848521213B1AB20001F876 /* places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = places.swift; sourceTree = "<group>"; };
+		69848524213B1D4B0001F876 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,8 @@
 		698484EB213AF1970001F876 /* Apeiron.App */ = {
 			isa = PBXGroup;
 			children = (
+				69848520213B1A950001F876 /* Map */,
 				698484EC213AF1970001F876 /* AppDelegate.swift */,
-				698484EE213AF1970001F876 /* MapViewController.swift */,
 				698484F0213AF1970001F876 /* Main.storyboard */,
 				698484F6213AF19C0001F876 /* Assets.xcassets */,
 				698484F8213AF19C0001F876 /* LaunchScreen.storyboard */,
@@ -126,6 +130,16 @@
 				69848511213AF19D0001F876 /* Info.plist */,
 			);
 			path = Apeiron.AppUITests;
+			sourceTree = "<group>";
+		};
+		69848520213B1A950001F876 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				69848524213B1D4B0001F876 /* Action.swift */,
+				698484EE213AF1970001F876 /* MapViewController.swift */,
+				69848521213B1AB20001F876 /* places.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69848525213B1D4B0001F876 /* Action.swift in Sources */,
 				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
 				698484EF213AF1970001F876 /* MapViewController.swift in Sources */,
 				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,
+				69848522213B1AB20001F876 /* places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
