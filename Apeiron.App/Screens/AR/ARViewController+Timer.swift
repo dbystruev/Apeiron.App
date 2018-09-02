@@ -1,5 +1,5 @@
 //
-//  Timer.swift
+//  ARViewController+Timer.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 02/09/2018.

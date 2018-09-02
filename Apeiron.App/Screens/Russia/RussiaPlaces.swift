@@ -1,5 +1,5 @@
 //
-//  cities.swift
+//  RussiaPlaces.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 02/09/2018.

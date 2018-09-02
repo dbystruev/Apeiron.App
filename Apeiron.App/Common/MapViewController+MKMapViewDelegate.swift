@@ -8,8 +8,9 @@
 
 import MapKit
 
+// MARK: - MKMapViewDelegate
+// Make MapViewController satisfy MKMapViewDelegate protocol
 extension MapViewController: MKMapViewDelegate {
-    // MARK: - MKMapViewDelegate
     
     /// Called when the user selects the pin
     ///

@@ -8,7 +8,9 @@
 
 import UIKit
 
+// MARK: - Gestures for MapViewController
 extension MapViewController {
+    
     /// Called when user moved the finger up
     ///
     /// - Parameters:

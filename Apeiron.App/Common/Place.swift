@@ -1,5 +1,5 @@
 //
-//  places.swift
+//  Place.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 01/09/2018.
