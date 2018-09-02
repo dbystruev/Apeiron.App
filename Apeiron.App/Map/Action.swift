@@ -48,11 +48,22 @@ enum Action {
             // get the main storyboard
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            // get the Moscow view controller
-            let moscowViewController = storyboard.instantiateViewController(withIdentifier: "MoscowViewController")
+            // source view controller from where to perform the segue
+            let sourceViewController: UIViewController
             
-            // transition from the Moscow view controller to the new one
-            moscowViewController.performSegue(withIdentifier: identifier, sender: moscowViewController)
+            // find the source view controller depending on identifier
+            switch identifier {
+            case "MoscowSegue":
+                sourceViewController = storyboard.instantiateViewController(withIdentifier: "RussiaViewController")
+            case "ARSegue":
+                sourceViewController = storyboard.instantiateViewController(withIdentifier: "MoscowViewController")
+            default:
+                // Impossible view controller
+                fatalError("Impossible view controller: \(identifier)")
+            }
+            
+            // perform the segue with Mosc
+            sourceViewController.performSegue(withIdentifier: identifier, sender: sourceViewController)
         }
     }
 }

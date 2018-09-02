@@ -114,6 +114,7 @@
 		6926B634213BEC4900CA11B4 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				69848524213B1D4B0001F876 /* Action.swift */,
 				6926B632213BEC4100CA11B4 /* MapViewController.swift */,
 				69848521213B1AB20001F876 /* Place.swift */,
 			);
@@ -178,7 +179,6 @@
 		69848520213B1A950001F876 /* Moscow */ = {
 			isa = PBXGroup;
 			children = (
-				69848524213B1D4B0001F876 /* Action.swift */,
 				69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */,
 				6926B635213BF01C00CA11B4 /* MoscowPlaces.swift */,
 				698484EE213AF1970001F876 /* MoscowViewController.swift */,

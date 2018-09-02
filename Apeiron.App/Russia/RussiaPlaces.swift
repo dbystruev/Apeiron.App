@@ -65,7 +65,7 @@ let russiaPlaces: [Place] = [
         title: "Михайловское"
     ),
     Place(
-        action: .none,
+        action: .performSegue("MoscowSegue"),
         address: "Россия",
         coordinate: CLLocationCoordinate2D(latitude: 55.753215, longitude: 37.622504),
         title: "Москва"
