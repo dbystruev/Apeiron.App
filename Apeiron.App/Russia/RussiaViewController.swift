@@ -6,25 +6,28 @@
 //  Copyright © 2018 Denis Bystruev. All rights reserved.
 //
 
+import MapKit
 import UIKit
 
-class RussiaViewController: UIViewController {
+class RussiaViewController: MapViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    /// Russia map view
+    @IBOutlet weak var russiaMapView: MKMapView!
+    
+    // The main navigation title
+    override var navigationTitle: String {
+        return "Пушкин в России"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /// Called when the map view has been loaded
+    override func viewDidLoad() {
+        // assign Moscow map view to parent map view
+        mapView = russiaMapView
+        
+        // use Moscow places fpr places
+        places = russiaPlaces
+        
+        // perform parent's viewDidLoad()
+        super.viewDidLoad()
     }
-    */
-
 }

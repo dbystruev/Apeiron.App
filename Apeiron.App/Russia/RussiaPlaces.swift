@@ -9,7 +9,7 @@
 import CoreLocation
 
 /// Cities in Russia which should be pinned on the map
-let cities: [Place] = [
+let russiaPlaces: [Place] = [
     Place(
         action: .none,
         address: "Эрзурум, Турция",
@@ -17,8 +17,8 @@ let cities: [Place] = [
         title: "Арзрум"
     ),
     Place(
-        action: .none,
-        address: "Большое Болдино, Большеболдинский район, Нижегородская область, Россия",
+        action: .openURL("http://www.boldinomuzey.ru"),
+        address: "Большеболдинский район, Нижегородская область, Россия",
         coordinate: CLLocationCoordinate2D(latitude: 55.002620, longitude: 45.311373),
         title: "Болдино"
     ),
@@ -59,7 +59,7 @@ let cities: [Place] = [
         title: "Кишенев"
     ),
     Place(
-        action: .none,
+        action: .openURL("http://pushkin.ellink.ru"),
         address: "Пушкинские Горы, Пушкиногорский район, Псковская область, Россия",
         coordinate: CLLocationCoordinate2D(latitude: 57.060088, longitude: 28.933298),
         title: "Михайловское"
@@ -77,7 +77,7 @@ let cities: [Place] = [
         title: "Одесса"
     ),
     Place(
-        action: .none,
+        action: .openURL("http://www.mio56.ru"),
         address: "Россия",
         coordinate: CLLocationCoordinate2D(latitude: 51.768199, longitude: 55.096955),
         title: "Оренбург"

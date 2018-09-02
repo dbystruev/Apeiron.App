@@ -45,20 +45,14 @@ enum Action {
                 }
             }
         case .performSegue(let identifier):
-            // get the navigation controller
-            guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else {
-                print("\(#function): can't find Navigation controller")
-                break
-            }
+            // get the main storyboard
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            // get the map view controller from the navigation controller
-            guard let mapViewController = navigationController.viewControllers.first as? MoscowViewController else {
-                print("\(#function): can't find Map View controller")
-                break
-            }
+            // get the Moscow view controller
+            let moscowViewController = storyboard.instantiateViewController(withIdentifier: "MoscowViewController")
             
-            // transition from the map view controller to the new one
-            mapViewController.performSegue(withIdentifier: identifier, sender: mapViewController)
+            // transition from the Moscow view controller to the new one
+            moscowViewController.performSegue(withIdentifier: identifier, sender: moscowViewController)
         }
     }
 }

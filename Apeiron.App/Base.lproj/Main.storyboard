@@ -13,7 +13,7 @@
         <!--Пушкин в Москве-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MoscowViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoscowViewController" id="BYZ-38-t0r" customClass="MoscowViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,22 +32,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Пушкин в Москве" largeTitleDisplayMode="always" id="yWg-rh-y5W">
-                        <barButtonItem key="backBarButtonItem" title="На карту" id="QVw-tc-inp"/>
+                        <barButtonItem key="backBarButtonItem" title="Москва" id="QVw-tc-inp"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="eLe-H5-W9E" id="CCi-rE-Lcc"/>
+                        <outlet property="moscowMapView" destination="eLe-H5-W9E" id="CCi-rE-Lcc"/>
                         <segue destination="Omf-fm-tMj" kind="show" identifier="ARSegue" id="znA-ou-tN1"/>
-                        <segue destination="G9b-mT-vZM" kind="show" identifier="RussiaSegue" id="XXy-XO-9mY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="27"/>
+            <point key="canvasLocation" x="1633" y="12"/>
         </scene>
         <!--Найдите книгу-->
         <scene sceneID="1lv-aO-Y7s">
             <objects>
-                <viewController id="Omf-fm-tMj" customClass="ARViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARViewController" id="Omf-fm-tMj" customClass="ARViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6m4-L7-R6h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,23 +95,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYV-va-5sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871" y="-215"/>
+            <point key="canvasLocation" x="2454" y="11"/>
         </scene>
         <!--Пушкин в России-->
         <scene sceneID="axE-z0-xbC">
             <objects>
-                <viewController id="G9b-mT-vZM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RussiaViewController" id="G9b-mT-vZM" customClass="RussiaViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tu0-Xb-hqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2DN-MV-a4q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fSc-bc-KWh" firstAttribute="trailing" secondItem="2DN-MV-a4q" secondAttribute="trailing" id="7jB-zk-HbC"/>
+                            <constraint firstItem="2DN-MV-a4q" firstAttribute="top" secondItem="fSc-bc-KWh" secondAttribute="top" id="UJJ-s7-zlA"/>
+                            <constraint firstItem="fSc-bc-KWh" firstAttribute="bottom" secondItem="2DN-MV-a4q" secondAttribute="bottom" id="i7F-zX-QDK"/>
+                            <constraint firstItem="2DN-MV-a4q" firstAttribute="leading" secondItem="fSc-bc-KWh" secondAttribute="leading" id="phs-hq-boa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fSc-bc-KWh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Пушкин в России" id="5f7-e7-16d"/>
+                    <navigationItem key="navigationItem" title="Пушкин в России" id="5f7-e7-16d">
+                        <barButtonItem key="backBarButtonItem" title="Россия" id="znE-PX-ZGd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="russiaMapView" destination="2DN-MV-a4q" id="Qhu-jg-xEB"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="MoscowSegue" id="5v7-ef-ke6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHc-Mb-1e6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="505"/>
+            <point key="canvasLocation" x="794" y="12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhR-35-1H2">
@@ -125,12 +141,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="snJ-1B-csl"/>
+                        <segue destination="G9b-mT-vZM" kind="relationship" relationship="rootViewController" id="ieP-cE-w1a"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gu5-iH-kFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="26.53673163418291"/>
+            <point key="canvasLocation" x="-38" y="13"/>
         </scene>
     </scenes>
 </document>
