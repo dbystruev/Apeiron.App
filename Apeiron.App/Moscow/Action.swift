@@ -52,7 +52,7 @@ enum Action {
             }
             
             // get the map view controller from the navigation controller
-            guard let mapViewController = navigationController.viewControllers.first as? MapViewController else {
+            guard let mapViewController = navigationController.viewControllers.first as? MoscowViewController else {
                 print("\(#function): can't find Map View controller")
                 break
             }

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6926B62E213BDBAB00CA11B4 /* RussiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B62D213BDBAB00CA11B4 /* RussiaViewController.swift */; };
+		6926B630213BDCE300CA11B4 /* cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B62F213BDCE300CA11B4 /* cities.swift */; };
 		698484ED213AF1970001F876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698484EC213AF1970001F876 /* AppDelegate.swift */; };
-		698484EF213AF1970001F876 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698484EE213AF1970001F876 /* MapViewController.swift */; };
+		698484EF213AF1970001F876 /* MoscowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698484EE213AF1970001F876 /* MoscowViewController.swift */; };
 		698484F2213AF1970001F876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698484F0213AF1970001F876 /* Main.storyboard */; };
 		698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 698484F3213AF1970001F876 /* Apeiron_App.xcdatamodeld */; };
 		698484F7213AF19C0001F876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698484F6213AF19C0001F876 /* Assets.xcassets */; };
@@ -44,9 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6926B62D213BDBAB00CA11B4 /* RussiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussiaViewController.swift; sourceTree = "<group>"; };
+		6926B62F213BDCE300CA11B4 /* cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cities.swift; sourceTree = "<group>"; };
 		698484E9213AF1970001F876 /* Apeiron.App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apeiron.App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		698484EC213AF1970001F876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		698484EE213AF1970001F876 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		698484EE213AF1970001F876 /* MoscowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoscowViewController.swift; sourceTree = "<group>"; };
 		698484F1213AF1970001F876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		698484F4213AF1970001F876 /* Apeiron_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Apeiron_App.xcdatamodel; sourceTree = "<group>"; };
 		698484F6213AF19C0001F876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6926B62C213BDB3400CA11B4 /* Russia */ = {
+			isa = PBXGroup;
+			children = (
+				6926B62D213BDBAB00CA11B4 /* RussiaViewController.swift */,
+				6926B62F213BDCE300CA11B4 /* cities.swift */,
+			);
+			path = Russia;
+			sourceTree = "<group>";
+		};
 		698484E0213AF1970001F876 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				6984852A213B5E180001F876 /* AR */,
-				69848520213B1A950001F876 /* Map */,
+				69848520213B1A950001F876 /* Moscow */,
+				6926B62C213BDB3400CA11B4 /* Russia */,
 				698484EC213AF1970001F876 /* AppDelegate.swift */,
 				698484F0213AF1970001F876 /* Main.storyboard */,
 				698484F6213AF19C0001F876 /* Assets.xcassets */,
@@ -147,16 +161,16 @@
 			path = Apeiron.AppUITests;
 			sourceTree = "<group>";
 		};
-		69848520213B1A950001F876 /* Map */ = {
+		69848520213B1A950001F876 /* Moscow */ = {
 			isa = PBXGroup;
 			children = (
 				69848524213B1D4B0001F876 /* Action.swift */,
 				69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */,
-				698484EE213AF1970001F876 /* MapViewController.swift */,
+				698484EE213AF1970001F876 /* MoscowViewController.swift */,
 				69848521213B1AB20001F876 /* Place.swift */,
 				69848526213B45140001F876 /* PointAnnotation.swift */,
 			);
-			path = Map;
+			path = Moscow;
 			sourceTree = "<group>";
 		};
 		6984852A213B5E180001F876 /* AR */ = {
@@ -310,10 +324,12 @@
 				69848534213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
 				6984852C213B5EC40001F876 /* ARViewController.swift in Sources */,
-				698484EF213AF1970001F876 /* MapViewController.swift in Sources */,
+				698484EF213AF1970001F876 /* MoscowViewController.swift in Sources */,
 				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,
 				69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				69848522213B1AB20001F876 /* Place.swift in Sources */,
+				6926B630213BDCE300CA11B4 /* cities.swift in Sources */,
+				6926B62E213BDBAB00CA11B4 /* RussiaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

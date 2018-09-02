@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MoscowViewController.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 01/09/2018.
@@ -9,7 +9,7 @@
 import MapKit
 import UIKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MoscowViewController: UIViewController, MKMapViewDelegate {
     
     /// Map view presenting the main screen
     @IBOutlet weak var mapView: MKMapView!
@@ -54,7 +54,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     /// Center and zoom the map so that all pins are visible
     func showAllPins() {
         // update the label
-        navigationItem.title = "Выберите задание"
+        navigationItem.title = "Пушкин в Москве"
         
         // no pin is selected, no second touch is possible
         secondTouch = false

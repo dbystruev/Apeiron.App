@@ -16,7 +16,7 @@ struct Place {
     let title: String
 }
 
-/// Places which should be pinned on the map
+/// Places in Moscow which should be pinned on the map
 let places: [Place] = [
     Place(
         action: .performSegue("ARSegue"),

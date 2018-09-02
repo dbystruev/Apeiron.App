@@ -4,15 +4,16 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Выберите задание-->
+        <!--Пушкин в Москве-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoscowViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,12 +31,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Выберите задание" largeTitleDisplayMode="always" id="yWg-rh-y5W">
+                    <navigationItem key="navigationItem" title="Пушкин в Москве" largeTitleDisplayMode="always" id="yWg-rh-y5W">
                         <barButtonItem key="backBarButtonItem" title="На карту" id="QVw-tc-inp"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="eLe-H5-W9E" id="CCi-rE-Lcc"/>
                         <segue destination="Omf-fm-tMj" kind="show" identifier="ARSegue" id="znA-ou-tN1"/>
+                        <segue destination="G9b-mT-vZM" kind="show" identifier="RussiaSegue" id="XXy-XO-9mY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,7 +96,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYV-va-5sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.5999999999999" y="26.53673163418291"/>
+            <point key="canvasLocation" x="1871" y="-215"/>
+        </scene>
+        <!--Пушкин в России-->
+        <scene sceneID="axE-z0-xbC">
+            <objects>
+                <viewController id="G9b-mT-vZM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tu0-Xb-hqc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fSc-bc-KWh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Пушкин в России" id="5f7-e7-16d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHc-Mb-1e6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="505"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhR-35-1H2">
