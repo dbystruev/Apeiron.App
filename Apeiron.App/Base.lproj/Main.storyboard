@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oBu-Al-gya">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Выберите задание-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,33 +18,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eLe-H5-W9E">
-                                <rect key="frame" x="0.0" y="41" width="375" height="626"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите задание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aof-bl-7et">
-                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eLe-H5-W9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J80-s1-V6W"/>
+                            <constraint firstItem="eLe-H5-W9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SbR-UH-7Z3"/>
+                            <constraint firstItem="eLe-H5-W9E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YmJ-dH-L5g"/>
+                            <constraint firstItem="eLe-H5-W9E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eCM-sw-TQ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выберите задание" largeTitleDisplayMode="always" id="yWg-rh-y5W">
+                        <barButtonItem key="backBarButtonItem" title="На карту" id="QVw-tc-inp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="eLe-H5-W9E" id="CCi-rE-Lcc"/>
+                        <segue destination="Omf-fm-tMj" kind="show" identifier="ARSegue" id="znA-ou-tN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="27"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="1lv-aO-Y7s">
+            <objects>
+                <viewController id="Omf-fm-tMj" customClass="ARViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6m4-L7-R6h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-gI-b6T">
+                                <rect key="frame" x="0.0" y="64" width="375" height="582"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-Ei-TF8">
+                                <rect key="frame" x="0.0" y="646" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eLe-H5-W9E" secondAttribute="bottom" id="0ad-AE-mDY"/>
-                            <constraint firstItem="eLe-H5-W9E" firstAttribute="top" secondItem="Aof-bl-7et" secondAttribute="bottom" id="5Ou-O5-ypr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLe-H5-W9E" secondAttribute="trailing" id="7GE-UO-JHX"/>
-                            <constraint firstItem="eLe-H5-W9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Btc-GK-gji"/>
-                            <constraint firstItem="Aof-bl-7et" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jaj-eg-pSa"/>
-                            <constraint firstItem="Aof-bl-7et" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KpD-oK-0mY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aof-bl-7et" secondAttribute="trailing" id="OXK-E8-muc"/>
+                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="leading" secondItem="Prh-Sq-qJr" secondAttribute="leading" id="RDZ-2M-kht"/>
+                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="top" secondItem="XSJ-gI-b6T" secondAttribute="bottom" id="Sqb-3Z-Kgz"/>
+                            <constraint firstItem="XSJ-gI-b6T" firstAttribute="top" secondItem="Prh-Sq-qJr" secondAttribute="top" id="TvX-eT-tWi"/>
+                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="trailing" secondItem="XSJ-gI-b6T" secondAttribute="trailing" id="Txr-s9-0c8"/>
+                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="trailing" secondItem="K0X-Ei-TF8" secondAttribute="trailing" id="VRW-sD-fyg"/>
+                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="bottom" secondItem="K0X-Ei-TF8" secondAttribute="bottom" id="aqc-1S-z72"/>
+                            <constraint firstItem="XSJ-gI-b6T" firstAttribute="leading" secondItem="Prh-Sq-qJr" secondAttribute="leading" id="mAz-Ca-fVG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Prh-Sq-qJr"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="buv-sB-vDt"/>
                     <connections>
-                        <outlet property="mapView" destination="eLe-H5-W9E" id="CCi-rE-Lcc"/>
+                        <outlet property="sceneView" destination="XSJ-gI-b6T" id="GZm-zk-J71"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYV-va-5sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1839" y="27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xhR-35-1H2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oBu-Al-gya" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zeH-I3-auT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="snJ-1B-csl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu5-iH-kFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

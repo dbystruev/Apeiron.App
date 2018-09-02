@@ -11,6 +11,9 @@ import UIKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+    /// Top label on the screen
+    @IBOutlet weak var label: UILabel!
+    
     /// Map view presenting the main screen
     @IBOutlet weak var mapView: MKMapView!
 
@@ -50,6 +53,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     /// Center and zoom the map so that all pins are visible
     func showAllPins() {
+        // update the label
+        navigationItem.title = "Выберите задание"
+        
+        // no pin is selected, no second touch is possible
+        secondTouch = false
+        
         // to find South West and North East coordinates start with the first element
         var southWest = places.first!.coordinate
         var northEast = southWest
@@ -118,6 +127,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             return
         }
         
+        // update the label
+        navigationItem.title = "Нажмите повторно для задания"
+        
         // create the new region with center and span around the tapped pin
         let center = annotation.coordinate
         var span = mapView.region.span
@@ -149,9 +161,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        // the pin is deselected, no second touch is possible yet
-        secondTouch = false
-        
         // center and zoom the map so that all pins are visible
         showAllPins()
     }
@@ -166,7 +175,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
             
             // perform the action
-            print("\(#function): Action to perform: \(action)")
+            action.perform()
+            
+            // after the return show all pins
+            showAllPins()
         } else {
             // next touch would be the second touch
             secondTouch = true

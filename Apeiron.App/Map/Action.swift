@@ -5,6 +5,7 @@
 //  Created by Denis Bystruev on 01/09/2018.
 //  Copyright © 2018 Denis Bystruev. All rights reserved.
 //
+
 import UIKit
 
 /// Action to perform when annotation pin is tapped on the map view
@@ -44,14 +45,20 @@ enum Action {
                 }
             }
         case .performSegue(let identifier):
-            // get the top view controller visible on the screen
-            guard let topController = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController else {
-                print("\(#function): can't find top view controller")
+            // get the navigation controller
+            guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else {
+                print("\(#function): can't find Navigation controller")
                 break
             }
             
-            // transition from the top view controller to the new one
-            topController.performSegue(withIdentifier: identifier, sender: topController)
+            // get the map view controller from the navigation controller
+            guard let mapViewController = navigationController.viewControllers.first as? MapViewController else {
+                print("\(#function): can't find Map View controller")
+                break
+            }
+            
+            // transition from the map view controller to the new one
+            mapViewController.performSegue(withIdentifier: identifier, sender: mapViewController)
         }
     }
 }

@@ -19,6 +19,7 @@
 		69848525213B1D4B0001F876 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848524213B1D4B0001F876 /* Action.swift */; };
 		69848527213B45140001F876 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848526213B45140001F876 /* PointAnnotation.swift */; };
 		69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */; };
+		6984852C213B5EC40001F876 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984852B213B5EC40001F876 /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		69848524213B1D4B0001F876 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		69848526213B45140001F876 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
+		6984852B213B5EC40001F876 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		698484EB213AF1970001F876 /* Apeiron.App */ = {
 			isa = PBXGroup;
 			children = (
+				6984852A213B5E180001F876 /* AR */,
 				69848520213B1A950001F876 /* Map */,
 				698484EC213AF1970001F876 /* AppDelegate.swift */,
 				698484F0213AF1970001F876 /* Main.storyboard */,
@@ -146,6 +149,14 @@
 				69848526213B45140001F876 /* PointAnnotation.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		6984852A213B5E180001F876 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				6984852B213B5EC40001F876 /* ARViewController.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				69848525213B1D4B0001F876 /* Action.swift in Sources */,
 				69848527213B45140001F876 /* PointAnnotation.swift in Sources */,
 				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
+				6984852C213B5EC40001F876 /* ARViewController.swift in Sources */,
 				698484EF213AF1970001F876 /* MapViewController.swift in Sources */,
 				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,
 				69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
