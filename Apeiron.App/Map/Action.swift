@@ -19,7 +19,7 @@ enum Action {
     case performSegue(String)
     
     /// Performs an action determined by self
-    func perform() {
+    func perform(sender: UIViewController) {
         // check which action to perform
         switch self {
         case .none:
@@ -45,25 +45,8 @@ enum Action {
                 }
             }
         case .performSegue(let identifier):
-            // get the main storyboard
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            // source view controller from where to perform the segue
-            let sourceViewController: UIViewController
-            
-            // find the source view controller depending on identifier
-            switch identifier {
-            case "MoscowSegue":
-                sourceViewController = storyboard.instantiateViewController(withIdentifier: "RussiaViewController")
-            case "ARSegue":
-                sourceViewController = storyboard.instantiateViewController(withIdentifier: "MoscowViewController")
-            default:
-                // Impossible view controller
-                fatalError("Impossible view controller: \(identifier)")
-            }
-            
-            // perform the segue with Mosc
-            sourceViewController.performSegue(withIdentifier: identifier, sender: sourceViewController)
+            // perform a segue with given identifier
+            sender.performSegue(withIdentifier: identifier, sender: sender)
         }
     }
 }

@@ -184,7 +184,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             navigationItem.title = "Подождите, пожалуйста..."
             
             // perform the action
-            action.perform()
+            action.perform(sender: self)
             
             // after the return show all pins
             showAllPins()

@@ -13,7 +13,7 @@
         <!--Пушкин в Москве-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MoscowViewController" id="BYZ-38-t0r" customClass="MoscowViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoscowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MoscowViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
         <!--Найдите книгу-->
         <scene sceneID="1lv-aO-Y7s">
             <objects>
-                <viewController storyboardIdentifier="ARViewController" id="Omf-fm-tMj" customClass="ARViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Omf-fm-tMj" customClass="ARViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6m4-L7-R6h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
         <!--Пушкин в России-->
         <scene sceneID="axE-z0-xbC">
             <objects>
-                <viewController storyboardIdentifier="RussiaViewController" id="G9b-mT-vZM" customClass="RussiaViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RussiaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G9b-mT-vZM" customClass="RussiaViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tu0-Xb-hqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +123,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="russiaMapView" destination="2DN-MV-a4q" id="Qhu-jg-xEB"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="MoscowSegue" id="5v7-ef-ke6"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="MoscowSegue" id="M6L-ZG-wFz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHc-Mb-1e6" userLabel="First Responder" sceneMemberID="firstResponder"/>
