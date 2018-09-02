@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="990" y="27"/>
         </scene>
-        <!--Title-->
+        <!--Найдите книгу-->
         <scene sceneID="1lv-aO-Y7s">
             <objects>
                 <viewController id="Omf-fm-tMj" customClass="ARViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,35 +51,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-gI-b6T">
-                                <rect key="frame" x="0.0" y="64" width="375" height="582"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-Ei-TF8">
-                                <rect key="frame" x="0.0" y="646" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-Ei-TF8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="21"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Однажды в студёную зимнюю пору...
+</string>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLy-eJ-GPR">
+                                <rect key="frame" x="138" y="328" width="99" height="96.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="-1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="leading" secondItem="Prh-Sq-qJr" secondAttribute="leading" id="RDZ-2M-kht"/>
-                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="top" secondItem="XSJ-gI-b6T" secondAttribute="bottom" id="Sqb-3Z-Kgz"/>
-                            <constraint firstItem="XSJ-gI-b6T" firstAttribute="top" secondItem="Prh-Sq-qJr" secondAttribute="top" id="TvX-eT-tWi"/>
-                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="trailing" secondItem="XSJ-gI-b6T" secondAttribute="trailing" id="Txr-s9-0c8"/>
-                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="trailing" secondItem="K0X-Ei-TF8" secondAttribute="trailing" id="VRW-sD-fyg"/>
-                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="bottom" secondItem="K0X-Ei-TF8" secondAttribute="bottom" id="aqc-1S-z72"/>
-                            <constraint firstItem="XSJ-gI-b6T" firstAttribute="leading" secondItem="Prh-Sq-qJr" secondAttribute="leading" id="mAz-Ca-fVG"/>
+                            <constraint firstItem="XSJ-gI-b6T" firstAttribute="leading" secondItem="Prh-Sq-qJr" secondAttribute="leading" id="272-X3-XWT"/>
+                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="trailing" secondItem="XSJ-gI-b6T" secondAttribute="trailing" id="3gZ-wL-a68"/>
+                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="top" secondItem="Prh-Sq-qJr" secondAttribute="top" id="EZD-se-d5h"/>
+                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="trailing" secondItem="Prh-Sq-qJr" secondAttribute="trailing" id="F7Z-dD-mA9"/>
+                            <constraint firstItem="Prh-Sq-qJr" firstAttribute="bottom" secondItem="XSJ-gI-b6T" secondAttribute="bottom" id="bm1-6u-T7f"/>
+                            <constraint firstItem="K0X-Ei-TF8" firstAttribute="leading" secondItem="Prh-Sq-qJr" secondAttribute="leading" id="efi-ku-l4H"/>
+                            <constraint firstItem="kLy-eJ-GPR" firstAttribute="centerX" secondItem="XSJ-gI-b6T" secondAttribute="centerX" id="hJg-RG-a7D"/>
+                            <constraint firstItem="XSJ-gI-b6T" firstAttribute="top" secondItem="K0X-Ei-TF8" secondAttribute="bottom" id="wic-gs-2hj"/>
+                            <constraint firstItem="kLy-eJ-GPR" firstAttribute="centerY" secondItem="XSJ-gI-b6T" secondAttribute="centerY" id="zLZ-Fh-qT5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Prh-Sq-qJr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="buv-sB-vDt"/>
+                    <navigationItem key="navigationItem" title="Найдите книгу" id="buv-sB-vDt"/>
                     <connections>
+                        <outlet property="middleLabel" destination="kLy-eJ-GPR" id="0M1-ki-bwQ"/>
                         <outlet property="sceneView" destination="XSJ-gI-b6T" id="GZm-zk-J71"/>
+                        <outlet property="topLabel" destination="K0X-Ei-TF8" id="Hg4-QU-6js"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYV-va-5sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="27"/>
+            <point key="canvasLocation" x="1837.5999999999999" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhR-35-1H2">

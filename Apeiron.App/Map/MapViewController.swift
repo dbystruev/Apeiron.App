@@ -11,9 +11,6 @@ import UIKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
-    /// Top label on the screen
-    @IBOutlet weak var label: UILabel!
-    
     /// Map view presenting the main screen
     @IBOutlet weak var mapView: MKMapView!
 
@@ -26,6 +23,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         // set initial view of the screen with pins
         setupMapView()
+        
+        // fetch assignments so reference images can load
+        _ = assignments
     }
     
     /// Set initial view of the screen with pins
@@ -112,6 +112,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotation(pin)
     }
     
+    // MARK: - MKMapViewDelegate
+    
     /// Called when the user selects the pin
     ///
     /// - Parameters:
@@ -173,6 +175,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 print("\(#function): can't unwrap action")
                 return
             }
+            
+            // ask the user to wait as the next screen could take a while to load
+            navigationItem.title = "Подождите, пожалуйста..."
             
             // perform the action
             action.perform()

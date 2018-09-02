@@ -20,6 +20,10 @@
 		69848527213B45140001F876 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848526213B45140001F876 /* PointAnnotation.swift */; };
 		69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */; };
 		6984852C213B5EC40001F876 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984852B213B5EC40001F876 /* ARViewController.swift */; };
+		6984852E213B6F9C0001F876 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984852D213B6F9C0001F876 /* Assignment.swift */; };
+		69848530213B8B190001F876 /* ARViewController+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984852F213B8B190001F876 /* ARViewController+Timer.swift */; };
+		69848532213B905B0001F876 /* TrackedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848531213B905B0001F876 /* TrackedArray.swift */; };
+		69848534213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848533213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		69848526213B45140001F876 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		69848528213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
 		6984852B213B5EC40001F876 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		6984852D213B6F9C0001F876 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		6984852F213B8B190001F876 /* ARViewController+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Timer.swift"; sourceTree = "<group>"; };
+		69848531213B905B0001F876 /* TrackedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackedArray.swift; sourceTree = "<group>"; };
+		69848533213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				6984852B213B5EC40001F876 /* ARViewController.swift */,
+				6984852D213B6F9C0001F876 /* Assignment.swift */,
+				6984852F213B8B190001F876 /* ARViewController+Timer.swift */,
+				69848533213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift */,
+				69848531213B905B0001F876 /* TrackedArray.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -290,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69848532213B905B0001F876 /* TrackedArray.swift in Sources */,
+				6984852E213B6F9C0001F876 /* Assignment.swift in Sources */,
 				69848525213B1D4B0001F876 /* Action.swift in Sources */,
 				69848527213B45140001F876 /* PointAnnotation.swift in Sources */,
+				69848530213B8B190001F876 /* ARViewController+Timer.swift in Sources */,
+				69848534213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				698484F5213AF1970001F876 /* Apeiron_App.xcdatamodeld in Sources */,
 				6984852C213B5EC40001F876 /* ARViewController.swift in Sources */,
 				698484EF213AF1970001F876 /* MapViewController.swift in Sources */,
@@ -475,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = Apeiron.App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = Apeiron.App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
