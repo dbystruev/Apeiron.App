@@ -11,7 +11,7 @@ import UIKit
 
 class MapViewController: UIViewController {
     
-    /// Places in the map which should be pinned on the map
+    /// Places in the map which should be pinned to the map
     var places: [Place]!
 
     /// Map view
@@ -19,7 +19,7 @@ class MapViewController: UIViewController {
     
     // The main navigation title
     var navigationTitle: String {
-        // should be not used directly — it is overriden in children view controllers
+        // should not be used directly — it is overriden in children view controllers
         return "Default"
     }
     
@@ -45,13 +45,13 @@ class MapViewController: UIViewController {
         // allow user to zoom
         mapView.isZoomEnabled = true
         
-        // set standard map type
+        // set map type to hybrid (satellite images with labels)
         mapView.mapType = .hybrid
         
         // center and zoom the map so that all pins are visible
         showAllPins()
         
-        // set the pins
+        // place the pins
         for place in places {
             setPin(place)
         }
@@ -62,7 +62,12 @@ class MapViewController: UIViewController {
         // update the label
         navigationItem.title = navigationTitle
         
-        // no pin is selected, no second touch is possible
+        // make all pins deselected
+        for annotation in mapView.selectedAnnotations {
+            mapView.deselectAnnotation(annotation, animated: true)
+        }
+        
+        // no pin is selected — do not expect second touch yet
         secondTouch = false
         
         // to find South West and North East coordinates start with the first element
@@ -83,7 +88,7 @@ class MapViewController: UIViewController {
             northEast.longitude = max(northEast.longitude, coordinate.longitude)
         }
         
-        // find out the deltas for the span and use the highest one
+        // find out the deltas of the span and use the highest one
         let latitudeDelta = abs(southWest.latitude - northEast.latitude)
         let longitudeDelta = abs(southWest.longitude - northEast.longitude)
         let maxDelta = 2 * max(latitudeDelta, longitudeDelta)
@@ -97,7 +102,7 @@ class MapViewController: UIViewController {
         // set the span area
         let span = MKCoordinateSpan(latitudeDelta: maxDelta, longitudeDelta: maxDelta)
         
-        // set the region
+        // set the region to cover all the points
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)
     }
@@ -106,15 +111,15 @@ class MapViewController: UIViewController {
     ///
     /// - Parameter place: a place where to put pin on
     func setPin(_ place: Place) {
-        // create a point annotation
+        // create a new pin
         let pin = PointAnnotation(place: place)
         
-        // set annotation's coordinate and title
+        // set pin's coordinate, title, and subtitle as address
         pin.coordinate = place.coordinate
         pin.subtitle = place.address
         pin.title = place.title
         
-        // add annotation to map
+        // add the pin to the map
         mapView.addAnnotation(pin)
     }
 }

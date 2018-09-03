@@ -26,8 +26,17 @@ enum Action {
             // no action to perform
             break
         case .openURL(let scheme):
-            // check that we can create a URL from the scheme ("scheme://")
-            guard let url = URL(string: scheme) else {
+            // a url we will convert the scheme into
+            var url: URL
+            
+            // check that we can create the URL from the scheme ("scheme://")
+            if let urlNonEncoded = URL(string: scheme) {
+                url = urlNonEncoded
+            // now try with percent encoding
+            } else if let schemeEncoded = scheme.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+                let urlEncoded = URL(string: schemeEncoded) {
+                url = urlEncoded
+            } else {
                 print("\(#function): can't convert a \(scheme) to URL")
                 break
             }

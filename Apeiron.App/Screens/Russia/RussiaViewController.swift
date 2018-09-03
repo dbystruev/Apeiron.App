@@ -21,13 +21,16 @@ class RussiaViewController: MapViewController {
     
     /// Called when the map view has been loaded
     override func viewDidLoad() {
-        // assign Moscow map view to parent map view
+        // assign Russia map view to the parent map view
         mapView = russiaMapView
         
-        // use Moscow places fpr places
+        // use Russia places as the places to show
         places = russiaPlaces
         
         // perform parent's viewDidLoad()
         super.viewDidLoad()
+        
+        // fetch assignments in advance so AR reference images can pre-load
+        Assignment.load()
     }
 }

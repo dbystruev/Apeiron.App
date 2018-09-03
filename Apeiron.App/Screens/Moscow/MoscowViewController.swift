@@ -21,16 +21,13 @@ class MoscowViewController: MapViewController {
 
     /// Called when the map view has been loaded
     override func viewDidLoad() {
-        // assign Moscow map view to parent map view
+        // assign Moscow map view to the parent map view
         mapView = moscowMapView
         
-        // use Moscow places fpr places
+        // use Moscow places as the places to show
         places = moscowPlaces
         
         // perform parent's viewDidLoad()
         super.viewDidLoad()
-        
-        // fetch assignments so reference images can load
-        Assignment.load()
     }
 }

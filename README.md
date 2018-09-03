@@ -1,7 +1,7 @@
 # Apeiron.App
 Apeiron App made as part of Moscow Teacher Hackaton on Sep 1–2, 2018 (http://eduhackathon.ru)
 
-There are 3 screens currently.  More can be added.
+You need to use Xcode 10 to compile.  There are 3 screens currently.  More can be added.
 
 ## The first two screens are the map views
 

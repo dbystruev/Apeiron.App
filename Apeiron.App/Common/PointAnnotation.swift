@@ -8,7 +8,7 @@
 
 import MapKit
 
-/// Point annotation derivative with extra place property
+/// Standard MKPointAnnotation with an extra property — place
 class PointAnnotation: MKPointAnnotation {
     /// A place this point annotates
     var place: Place
