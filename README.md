@@ -88,13 +88,15 @@ let assignments = TrackedArray(
 
 A student is given 30 seconds to answer.  In order to answer they have to find an object which is determined by the question — e. g. a book's title, some page within the book, a portrait of someone etc.  The pictures of those objects have to be loaded into [/Common/Assets.xcassets/AR%20Resources.arresourcegroup](https://github.com/dbystruev/Apeiron.App/tree/master/Apeiron.App/Common/Assets.xcassets/AR%20Resources.arresourcegroup) folder the usual way via Xcode.
 
+The name of each AR reference image should be set in Xcode attribute inspector and it should match `imageName` property of `assignmets` element.
+
 Currently only the first question is displayed, but you can change code in [/Screens/AR/ARViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/AR/ARViewController.swift) to display a random question until all questions are exausted.
 
 The screen with countdown timer:
 
 ![AR Quiz](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Common/Assets.xcassets/Screnshots/AR%20Quiz.imageset/AR%20Quiz.png?raw=true)
 
-We lose if we didn't fine the answer:
+We lose if we didn't find the answer:
 
 ![AR Quiz Wrong](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Common/Assets.xcassets/Screnshots/AR%20Quiz%20Wrong.imageset/AR%20Quiz%20Wrong.png?raw=true)
 

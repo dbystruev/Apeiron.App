@@ -31,6 +31,6 @@ class MoscowViewController: MapViewController {
         super.viewDidLoad()
         
         // fetch assignments so reference images can load
-        _ = assignments
+        Assignment.load()
     }
 }

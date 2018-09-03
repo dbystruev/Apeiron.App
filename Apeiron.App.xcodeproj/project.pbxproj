@@ -30,6 +30,7 @@
 		69848530213B8B190001F876 /* ARViewController+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984852F213B8B190001F876 /* ARViewController+Timer.swift */; };
 		69848532213B905B0001F876 /* TrackedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848531213B905B0001F876 /* TrackedArray.swift */; };
 		69848534213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69848533213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift */; };
+		69D7E1BB213CA4CB00C54020 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 69D7E1BA213CA4CB00C54020 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6984852F213B8B190001F876 /* ARViewController+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Timer.swift"; sourceTree = "<group>"; };
 		69848531213B905B0001F876 /* TrackedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackedArray.swift; sourceTree = "<group>"; };
 		69848533213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		69D7E1BA213CA4CB00C54020 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				69848503213AF19C0001F876 /* Apeiron.AppTests */,
 				6984850E213AF19C0001F876 /* Apeiron.AppUITests */,
 				698484EA213AF1970001F876 /* Products */,
+				69D7E1BA213CA4CB00C54020 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -319,6 +322,7 @@
 			files = (
 				698484FA213AF19C0001F876 /* LaunchScreen.storyboard in Resources */,
 				698484F7213AF19C0001F876 /* Assets.xcassets in Resources */,
+				69D7E1BB213CA4CB00C54020 /* README.md in Resources */,
 				698484F2213AF1970001F876 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

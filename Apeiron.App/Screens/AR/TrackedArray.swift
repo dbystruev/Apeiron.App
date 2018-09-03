@@ -25,6 +25,9 @@ struct TrackedArray<Element> {
         get {
             return self[currentIndex]
         }
+        set {
+            contents[currentIndex] = newValue
+        }
     }
     
     /// The next element

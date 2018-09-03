@@ -45,7 +45,7 @@ class ARViewController: UIViewController {
         sceneView.scene = SCNScene()
         
         // Show the first assignment
-        topLabel.text = assignments.current?.question
+        topLabel.text = assignments.current.question
         topLabel.numberOfLines = 0
     }
     

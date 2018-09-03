@@ -28,7 +28,7 @@ extension ARViewController {
             sceneView.session.pause()
             
             // retrieve the current answer
-            let answer = assignments.current?.answer
+            let answer = assignments.current.answer
             
             // will assign different values if won or lost
             let text = won ? "Верно!" : "Поздно!"

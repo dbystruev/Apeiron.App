@@ -21,10 +21,7 @@ extension ARViewController: ARSCNViewDelegate {
         // make sure detected anchor is indeed image
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         
-        // get the current task
-        guard let assignment = assignments.current else { return }
-        
         // check if we found the image we are looking for
-        won = imageAnchor.referenceImage == assignment.image
+        won = imageAnchor.referenceImage == assignments.current.image
     }
 }
