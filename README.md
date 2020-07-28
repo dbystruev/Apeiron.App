@@ -1,5 +1,5 @@
 # Apeiron.App
-Apeiron App made as part of Moscow Teacher Hackaton on Sep 1–2, 2018 (http://eduhackathon.ru)
+Apeiron App initially made as part of [Moscow Teacher Hackaton](https://web.archive.org/web/20180916000305/http://eduhackathon.ru/) on Sep 1–2, 2018 and updated to Xcode 12 in 2020.
 
 You need to use Xcode 12 to compile.  There are 3 screens currently.  More can be added.
 
@@ -15,7 +15,7 @@ Pushkin in Moscow
 
 What is displayed there is defined by `places: [Place]` property of their view controllers:
 
-- `RussiaViewController` defined in [/Screens/Country/CountryViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Country/CountryViewController.swift)
+- `CountryViewController` defined in [/Screens/Country/CountryViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Country/CountryViewController.swift)
 - `MoscowViewController` defined in [/Screens/Moscow/MoscowViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Moscow/MoscowViewController.swift)
 
 which are descendats of `MapViewController` defined in [Common/MapViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Common/MapViewController.swift).
