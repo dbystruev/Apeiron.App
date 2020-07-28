@@ -1,5 +1,5 @@
 //
-//  RussiaPlaces.swift
+//  CountryPlaces.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 02/09/2018.
@@ -8,8 +8,8 @@
 
 import CoreLocation
 
-/// Cities in Russia which should be pinned on the map
-let russiaPlaces: [Place] = [
+/// Places at the first screen which should be pinned on the map
+let countryPlaces: [Place] = [
     Place(
         action: .openURL("https://ilibrary.ru/text/483/index.html"),
         address: "Эрзурум, Турция",

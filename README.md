@@ -1,7 +1,7 @@
 # Apeiron.App
 Apeiron App made as part of Moscow Teacher Hackaton on Sep 1–2, 2018 (http://eduhackathon.ru)
 
-You need to use Xcode 10 to compile.  There are 3 screens currently.  More can be added.
+You need to use Xcode 12 to compile.  There are 3 screens currently.  More can be added.
 
 ## The first two screens are the map views
 
@@ -15,14 +15,14 @@ Pushkin in Moscow
 
 What is displayed there is defined by `places: [Place]` property of their view controllers:
 
-- `RussiaViewController` defined in [/Screens/Russia/RussiaViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Russia/RussiaViewController.swift)
+- `RussiaViewController` defined in [/Screens/Country/CountryViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Country/CountryViewController.swift)
 - `MoscowViewController` defined in [/Screens/Moscow/MoscowViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Moscow/MoscowViewController.swift)
 
 which are descendats of `MapViewController` defined in [Common/MapViewController.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Common/MapViewController.swift).
 
-The `places` property assigned the content of `russiaPlaces` and `moscowPlaces`, which are defined in:
+The `places` property assigned the content of `countryPlaces` and `moscowPlaces`, which are defined in:
 
-- `russiaPlaces` in [/Screens/Russia/RussiaPlaces.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Russia/RussiaPlaces.swift)
+- `countryPlaces` in [/Screens/Country/CountryPlaces.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Country/CountryPlaces.swift)
 - `moscowPlaces` in [/Screens/Moscow/MoscowPlaces.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Moscow/MoscowPlaces.swift)
 
 `Place` is defined in [Common/Place.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Common/Place.swift).
@@ -38,10 +38,10 @@ In case of `openURL` the String is URL to open — e. g. "[http://www.boldinomu
 
 In case of `performSegue` the String is the segue’s [identifier](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621413-performsegue) defined in Xcode Interface Builder for each segue.
 
-Excerpt from `russiaPlaces: [Place]` defined in [/Screens/Russia/RussiaPlaces.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Russia/RussiaPlaces.swift) with all three cases:
+Excerpt from `countryPlaces: [Place]` defined in [/Screens/Country/CountryPlaces.swift](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Screens/Country/CountryPlaces.swift) with all three cases:
 
 ```
-let russiaPlaces: [Place] = [
+let countryPlaces: [Place] = [
     Place(
         action: .openURL("http://www.boldinomuzey.ru"),
         address: "Bolsheboldinsky raion, Nizhegorodskaya oblast, Russia",
@@ -103,7 +103,3 @@ We lose if we didn't find the answer:
 We win if we did find the object asked for in the question:
 
 ![AR Quiz Correct](https://github.com/dbystruev/Apeiron.App/blob/master/Apeiron.App/Common/Assets.xcassets/Screnshots/AR%20Quiz%20Correct.imageset/AR%20Quiz%20Correct.png?raw=true).
-
-## Apeiron team
-
-See [Apeiron.app](https://apeiron.app).

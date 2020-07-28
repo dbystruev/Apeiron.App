@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6926B62E213BDBAB00CA11B4 /* RussiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B62D213BDBAB00CA11B4 /* RussiaViewController.swift */; };
-		6926B630213BDCE300CA11B4 /* RussiaPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B62F213BDCE300CA11B4 /* RussiaPlaces.swift */; };
+		6926B62E213BDBAB00CA11B4 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B62D213BDBAB00CA11B4 /* CountryViewController.swift */; };
+		6926B630213BDCE300CA11B4 /* CountryPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B62F213BDCE300CA11B4 /* CountryPlaces.swift */; };
 		6926B633213BEC4100CA11B4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B632213BEC4100CA11B4 /* MapViewController.swift */; };
 		6926B636213BF01C00CA11B4 /* MoscowPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B635213BF01C00CA11B4 /* MoscowPlaces.swift */; };
 		6926B638213C882B00CA11B4 /* MapViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B637213C882B00CA11B4 /* MapViewController+MKMapViewDelegate.swift */; };
@@ -51,8 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6926B62D213BDBAB00CA11B4 /* RussiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussiaViewController.swift; sourceTree = "<group>"; };
-		6926B62F213BDCE300CA11B4 /* RussiaPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussiaPlaces.swift; sourceTree = "<group>"; };
+		6926B62D213BDBAB00CA11B4 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		6926B62F213BDCE300CA11B4 /* CountryPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPlaces.swift; sourceTree = "<group>"; };
 		6926B632213BEC4100CA11B4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6926B635213BF01C00CA11B4 /* MoscowPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoscowPlaces.swift; sourceTree = "<group>"; };
 		6926B637213C882B00CA11B4 /* MapViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
@@ -108,13 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6926B62C213BDB3400CA11B4 /* Russia */ = {
+		6926B62C213BDB3400CA11B4 /* Country */ = {
 			isa = PBXGroup;
 			children = (
-				6926B62D213BDBAB00CA11B4 /* RussiaViewController.swift */,
-				6926B62F213BDCE300CA11B4 /* RussiaPlaces.swift */,
+				6926B62F213BDCE300CA11B4 /* CountryPlaces.swift */,
+				6926B62D213BDBAB00CA11B4 /* CountryViewController.swift */,
 			);
-			path = Russia;
+			path = Country;
 			sourceTree = "<group>";
 		};
 		6926B634213BEC4900CA11B4 /* Common */ = {
@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				6984852A213B5E180001F876 /* AR */,
+				6926B62C213BDB3400CA11B4 /* Country */,
 				69848520213B1A950001F876 /* Moscow */,
-				6926B62C213BDB3400CA11B4 /* Russia */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -208,9 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				6984852B213B5EC40001F876 /* ARViewController.swift */,
-				6984852D213B6F9C0001F876 /* Assignment.swift */,
-				6984852F213B8B190001F876 /* ARViewController+Timer.swift */,
 				69848533213B91F10001F876 /* ARViewController+ARSCNViewDelegate.swift */,
+				6984852F213B8B190001F876 /* ARViewController+Timer.swift */,
+				6984852D213B6F9C0001F876 /* Assignment.swift */,
 				69848531213B905B0001F876 /* TrackedArray.swift */,
 			);
 			path = AR;
@@ -279,18 +279,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Denis Bystruev";
 				TargetAttributes = {
 					698484E8213AF1970001F876 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 					};
 					698484FF213AF19C0001F876 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 						TestTargetID = 698484E8213AF1970001F876;
 					};
 					6984850A213AF19C0001F876 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 						TestTargetID = 698484E8213AF1970001F876;
 					};
 				};
@@ -361,11 +364,11 @@
 				698484ED213AF1970001F876 /* AppDelegate.swift in Sources */,
 				69848529213B50B10001F876 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				69848522213B1AB20001F876 /* Place.swift in Sources */,
-				6926B630213BDCE300CA11B4 /* RussiaPlaces.swift in Sources */,
+				6926B630213BDCE300CA11B4 /* CountryPlaces.swift in Sources */,
 				6926B636213BF01C00CA11B4 /* MoscowPlaces.swift in Sources */,
 				6926B633213BEC4100CA11B4 /* MapViewController.swift in Sources */,
 				6926B63A213C89C300CA11B4 /* MapViewController+Gestures.swift in Sources */,
-				6926B62E213BDBAB00CA11B4 /* RussiaViewController.swift in Sources */,
+				6926B62E213BDBAB00CA11B4 /* CountryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +449,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -507,6 +511,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -541,16 +546,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020.07.28;
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = Apeiron.App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-App";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = app.getoutfit.places;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -560,16 +567,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020.07.28;
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = Apeiron.App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-App";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = app.getoutfit.places;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -589,7 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apeiron.App.app/Apeiron.App";
 			};
@@ -610,7 +619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apeiron.App.app/Apeiron.App";
 			};
@@ -630,7 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Apeiron.App;
 			};
@@ -650,7 +659,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.learnSwift.Apeiron-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Apeiron.App;
 			};

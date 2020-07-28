@@ -1,5 +1,5 @@
 //
-//  RussiaViewController.swift
+//  CountryViewController.swift
 //  Apeiron.App
 //
 //  Created by Denis Bystruev on 02/09/2018.
@@ -9,10 +9,10 @@
 import MapKit
 import UIKit
 
-class RussiaViewController: MapViewController {
+class CountryViewController: MapViewController {
 
-    /// Russia map view
-    @IBOutlet weak var russiaMapView: MKMapView!
+    /// Country map view
+    @IBOutlet weak var countryMapView: MKMapView!
     
     // The main navigation title
     override var navigationTitle: String {
@@ -22,10 +22,10 @@ class RussiaViewController: MapViewController {
     /// Called when the map view has been loaded
     override func viewDidLoad() {
         // assign Russia map view to the parent map view
-        mapView = russiaMapView
+        mapView = countryMapView
         
-        // use Russia places as the places to show
-        places = russiaPlaces
+        // use country places as the places to show
+        places = countryPlaces
         
         // perform parent's viewDidLoad()
         super.viewDidLoad()
